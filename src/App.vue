@@ -3,7 +3,7 @@
         <v-app id="app">
             <v-toolbar color="indigo darken-1" dark fixed app>
                 <v-icon>location_on</v-icon>
-                <v-toolbar-title>Walmart store locator</v-toolbar-title>
+                <v-toolbar-title>Awesome Dating App</v-toolbar-title>
             </v-toolbar>
             <v-content>
                 <router-view></router-view>
