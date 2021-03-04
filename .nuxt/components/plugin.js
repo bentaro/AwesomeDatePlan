@@ -1,8 +1,7 @@
 import Vue from 'vue'
 
 const components = {
-  Logo: () => import('../../components/Logo.vue' /* webpackChunkName: "components/logo" */).then(c => c.default || c),
-  VuetifyLogo: () => import('../../components/VuetifyLogo.vue' /* webpackChunkName: "components/vuetify-logo" */).then(c => c.default || c)
+  MapPanel: () => import('../../components/MapPanel.vue' /* webpackChunkName: "components/map-panel" */).then(c => c.default || c)
 }
 
 for (const name in components) {

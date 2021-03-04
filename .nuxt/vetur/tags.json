@@ -1,8 +1,5 @@
 {
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
-  },
-  "VuetifyLogo": {
-    "description": "Auto imported from components/VuetifyLogo.vue"
+  "MapPanel": {
+    "description": "Auto imported from components/MapPanel.vue"
   }
 }
