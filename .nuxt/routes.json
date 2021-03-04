@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/home/ben/dev/OpenHackU/frontend/AwesomeDatePlan/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_2becd4af"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/ben/dev/OpenHackU/frontend/AwesomeDatePlan/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_3ec7b9e7"
+  }
+]
