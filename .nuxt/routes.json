@@ -7,11 +7,11 @@
     "_name": "_479659cc"
   },
   {
-    "name": "searchBar",
-    "path": "/searchBar",
-    "component": "/home/kanaya/hackathon/open_hack_u/AwesomeDatePlan/pages/searchBar.vue",
-    "chunkName": "pages/searchBar",
-    "_name": "_6ad99586"
+    "name": "plan",
+    "path": "/plan",
+    "component": "/home/kanaya/hackathon/open_hack_u/AwesomeDatePlan/pages/plan.vue",
+    "chunkName": "pages/plan",
+    "_name": "_9ac343b2"
   },
   {
     "name": "index",

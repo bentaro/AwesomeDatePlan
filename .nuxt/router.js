@@ -5,7 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _479659cc = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
-const _6ad99586 = () => interopDefault(import('../pages/searchBar.vue' /* webpackChunkName: "pages/searchBar" */))
+const _9ac343b2 = () => interopDefault(import('../pages/plan.vue' /* webpackChunkName: "pages/plan" */))
 const _134c3b78 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -24,9 +24,9 @@ export const routerOptions = {
     component: _479659cc,
     name: "inspire"
   }, {
-    path: "/searchBar",
-    component: _6ad99586,
-    name: "searchBar"
+    path: "/plan",
+    component: _9ac343b2,
+    name: "plan"
   }, {
     path: "/",
     component: _134c3b78,
