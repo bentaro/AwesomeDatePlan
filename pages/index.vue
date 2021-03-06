@@ -16,7 +16,7 @@
                 </v-text-field>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn @click.native="search" depressed>
+                  <v-btn @click.native="search" to="/" depressed>
                     検索
                   </v-btn>
                 </v-card-actions>
@@ -48,9 +48,6 @@ export default {
             .catch(error => {
                 console.log(error);
             }); */
-
-            // DELETE
-            this.$router.push("/");
         }
     }
 }
