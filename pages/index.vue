@@ -1,36 +1,28 @@
 <template>
 <div>
-    <div>
-        <div align="center">
-            <div style="font-size:30px;">
-                次のデートはどこへ行きますか？
-            </div>
-            <v-form>
-                <v-container>
-                    <v-row justify="center" align-content="center">
-                        <v-col
-                        cols="12"
-                        sm="6"
-                        md="4">
-                            <v-text-field
-                            label="次のデートの目的地"
-                            placeholder="Dense & Rounded"
-                            filled
-                            rounded
-                            dense
-                            v-model="inputText">
-                            </v-text-field>
-                        </v-col>
-                    </v-row>
-                    <v-row justify="center">
-                        <v-btn @click="search" dense filled depressed>
-                            検索
-                        </v-btn>
-                    </v-row>
-                </v-container>
-            </v-form>
+    <v-app :style="{ background: $vuetify.theme.themes.light.background }">
+        <div class="my-auto">
+            <v-card class="mx-lg-15 tile" color="white" align="center">
+                <v-card-title style="font-size:25px;">
+                    次のデートはどこへ行きますか？
+                </v-card-title>
+                <v-text-field
+                placeholder="Dense & Rounded"
+                filled
+                rounded
+                dense
+                v-model="inputText"
+                label="次のデートスポット">
+                </v-text-field>
+                <v-card-actions>
+                  <v-spacer />
+                  <v-btn @click.native="search" depressed>
+                    検索
+                  </v-btn>
+                </v-card-actions>
+            </v-card>
         </div>
-    </div>
+    </v-app>
 </div>
 </template>
 
