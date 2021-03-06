@@ -12,8 +12,9 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_42b496fe from 'nuxt_plugin_plugin_42b496fe' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_1c6c3db0 from 'nuxt_plugin_plugin_1c6c3db0' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_3b2917c4 from 'nuxt_plugin_plugin_3b2917c4' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_plugin_52b6e2aa from 'nuxt_plugin_plugin_52b6e2aa' // Source: ./vuetify/plugin.js (mode: 'all')
+import nuxt_plugin_axios_737dc8da from 'nuxt_plugin_axios_737dc8da' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_googlemaps_69c3a81e from 'nuxt_plugin_googlemaps_69c3a81e' // Source: ../plugins/googlemaps.js (mode: 'all')
 
 // Component: <ClientOnly>
@@ -174,12 +175,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_42b496fe === 'function') {
-    await nuxt_plugin_plugin_42b496fe(app.context, inject)
+  if (typeof nuxt_plugin_plugin_3b2917c4 === 'function') {
+    await nuxt_plugin_plugin_3b2917c4(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_1c6c3db0 === 'function') {
-    await nuxt_plugin_plugin_1c6c3db0(app.context, inject)
+  if (typeof nuxt_plugin_plugin_52b6e2aa === 'function') {
+    await nuxt_plugin_plugin_52b6e2aa(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_737dc8da === 'function') {
+    await nuxt_plugin_axios_737dc8da(app.context, inject)
   }
 
   if (typeof nuxt_plugin_googlemaps_69c3a81e === 'function') {

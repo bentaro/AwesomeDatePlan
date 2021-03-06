@@ -2,15 +2,22 @@
   {
     "name": "inspire",
     "path": "/inspire",
-    "component": "/home/ben/OpenhackU/AwesomeDatePlan/pages/inspire.vue",
+    "component": "/home/kanaya/hackathon/open_hack_u/AwesomeDatePlan/pages/inspire.vue",
     "chunkName": "pages/inspire",
-    "_name": "_6f15f152"
+    "_name": "_479659cc"
+  },
+  {
+    "name": "searchBar",
+    "path": "/searchBar",
+    "component": "/home/kanaya/hackathon/open_hack_u/AwesomeDatePlan/pages/searchBar.vue",
+    "chunkName": "pages/searchBar",
+    "_name": "_6ad99586"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/ben/OpenhackU/AwesomeDatePlan/pages/index.vue",
+    "component": "/home/kanaya/hackathon/open_hack_u/AwesomeDatePlan/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_49c5a34a"
+    "_name": "_134c3b78"
   }
 ]

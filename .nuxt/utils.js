@@ -178,7 +178,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"MAP_API_KEY":"AIzaSyDA-JRoBgHYWJOxITLgE5kxsr0O9H-0zpE"}
+      env: {"MAP_API_KEY":"AIzaSyDA-JRoBgHYWJOxITLgE5kxsr0O9H-0zpE","PORT":"3000"}
     }
     // Only set once
 
