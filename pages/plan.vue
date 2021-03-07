@@ -9,15 +9,48 @@
 				<v-col cols="9">
 					<v-card class="mx-auto" color="orange accent-1">
 						<v-card-title style="font-size:30px">おすすめのカフェ</v-card-title>
-						<v-container fluid>
+
 							<v-row>
-								<div v-for="url in this.cafeURL" :key=url>
-									<v-col cols="6">
-										<img :src=url />
-									</v-col>
-								</div>
+								<v-col
+									v-for="n in 9"
+									:key="n"
+									class="d-flex child-flex"
+									cols="4"
+								>
+									<v-img
+										:src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+										:lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+										aspect-ratio="1"
+										class="grey lighten-2"
+									>
+										<template v-slot:placeholder>
+											<v-row
+												class="fill-height ma-0"
+												align="center"
+												justify="center"
+											>
+												<v-progress-circular
+													indeterminate
+													color="grey lighten-5"
+												></v-progress-circular>
+											</v-row>
+										</template>
+									</v-img>
+								</v-col>
 							</v-row>
-						</v-container>
+
+							<v-card-actions>
+								<v-spacer />
+								<v-btn
+									color="secondary"
+									elevation="5"
+									large
+									raised
+									rounded
+									to="/cafeList"
+								>Details</v-btn>
+							</v-card-actions>
+
 					</v-card>
 				</v-col>
 			</v-row>
@@ -31,15 +64,6 @@ import timeTable from "../components/timeTable";
 export default {
 	data() {
 		return {
-			cafeURL: ["https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",
-			"https://haccola.jp/wp/wp-content/uploads/640_Koujichu.jpg",]
 		}
 	},
 	components: {

@@ -11,12 +11,12 @@
                 filled
                 rounded
                 dense
-                v-model="inputText"
+                v-model="spotName"
                 label="次のデートスポット">
                 </v-text-field>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn @click.native="search" to="/plan" depressed>
+                  <v-btn @click.native="searchCafe" to="/plan" depressed>
                     検索
                   </v-btn>
                 </v-card-actions>
@@ -30,25 +30,22 @@
 export default {
     data() {
         return {
-            inputText: "",
+            spotName: "",
         };
     },
     components: {
-
     },
     methods: {
-        search: function() {
-            let url = "";
-            console.log(this.inputText);
-            /* this.$axios.$get(url)
-            .then(res => {
-                console.log(res);
-                this.$router.push("/");
-            })
-            .catch(error => {
-                console.log(error);
-            }); */
-        }
+			searchCafe: function() {
+				this.$store.commit("setSpot", this.spotName);
+				this.$store.dispatch("getCafeInfoList", this.spotName)
+					.then(_ => {
+						this.$router.push("/plan");
+					})
+					.catch(error => {
+						console.log(error);
+					})
+			},
     }
 }
 </script>

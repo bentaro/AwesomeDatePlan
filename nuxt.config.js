@@ -47,6 +47,11 @@ export default {
     '@nuxtjs/dotenv',
   ],
 
+  // environment variables
+  env: {
+    apiServerBase: "http://sakonji.hongo.wide.ad.jp:8000/api"
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -65,6 +70,7 @@ export default {
         },
         light: {
           background: "#e0e0e0",
+          secondary: colors.amber.darken3,
         },
       },
     }

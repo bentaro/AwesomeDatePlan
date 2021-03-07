@@ -51,12 +51,12 @@
 					>
 					<v-row class="pt-1">
 							<v-col cols="3">
-							<strong>5pm</strong>
+							<strong>1-3pm</strong>
 							</v-col>
 							<v-col>
-							<strong>New Icon</strong>
+							<strong>{{this.spot}}</strong>
 							<div class="caption">
-									Mobile App
+									main spot
 							</div>
 							</v-col>
 					</v-row>
@@ -68,12 +68,12 @@
 					>
 					<v-row class="pt-1">
 							<v-col cols="3">
-							<strong>3-4pm</strong>
+							<strong>4-6pm</strong>
 							</v-col>
 							<v-col>
 							<strong>Design Stand Up</strong>
 							<div class="caption mb-2">
-									Hangouts
+									cafe
 							</div>
 							<v-avatar>
 									<v-img
@@ -100,10 +100,13 @@
 					>
 					<v-row class="pt-1">
 							<v-col cols="3">
-							<strong>12pm</strong>
+							<strong>7-9pm</strong>
 							</v-col>
 							<v-col>
-							<strong>Lunch break</strong>
+							<strong>light Lunch</strong>
+							<div class="caption mb-2">
+									dinner
+							</div>
 							</v-col>
 					</v-row>
 					</v-timeline-item>
@@ -114,12 +117,12 @@
 					>
 					<v-row class="pt-1">
 							<v-col cols="3">
-							<strong>9-11am</strong>
+							<strong>10pm-</strong>
 							</v-col>
 							<v-col>
 							<strong>Finish Home Screen</strong>
 							<div class="caption">
-									Web App
+									night view
 							</div>
 							</v-col>
 					</v-row>
@@ -132,5 +135,17 @@
 <script>
 export default {
 	name: "timeTable",
+
+	data() {
+		return {
+			spot: "",
+			cafe: "",
+			dinner: "",
+			nightView: "",
+		};
+	},
+	created() {
+		this.spot = this.$store.getters.spotName;
+	}
 }
 </script>
