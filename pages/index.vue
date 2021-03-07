@@ -16,7 +16,7 @@
                 </v-text-field>
                 <v-card-actions>
                   <v-spacer />
-                  <v-btn @click.native="search" to="/" depressed>
+                  <v-btn @click.native="search" to="/plan" depressed>
                     検索
                   </v-btn>
                 </v-card-actions>
