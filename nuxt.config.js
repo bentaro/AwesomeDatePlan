@@ -39,18 +39,25 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/axios',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
+
+  // environment variables
+  env: {
+    apiServerBase: "http://sakonji.hongo.wide.ad.jp:8000/api"
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      // dark: true,
+      light: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -60,8 +67,12 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
-      }
+        },
+        light: {
+          background: "#e0e0e0",
+          secondary: colors.amber.darken3,
+        },
+      },
     }
   },
 

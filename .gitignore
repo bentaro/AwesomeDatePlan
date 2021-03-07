@@ -9,6 +9,7 @@ yarn-error.log*
 selenium-debug.log
 /config/local*
 .env
+.nuxt
 
 # Editor directories and files
 .idea
