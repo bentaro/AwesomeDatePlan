@@ -1,7 +1,6 @@
-
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
+    <v-col>
       <v-card>
         <GmapMap
           map-type-id="roadmap"
@@ -19,6 +18,7 @@
 <script>
 
 export default {
+  name: "MapPanel",
   components: {
   },
   data() {
@@ -27,7 +27,7 @@ export default {
       zoom: 10,
       styleMap: {
         width: '100%',
-        height: '400px',
+        height: '600px',
       },
       mapOptions: {
         streetViewControl: false,
