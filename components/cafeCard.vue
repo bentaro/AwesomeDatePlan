@@ -1,6 +1,5 @@
 <template>
   <v-card
-    :loading="loading"
     class="mx-auto my-12"
     max-width="1200"
     hover
@@ -11,8 +10,8 @@
         <v-col cols="12" sm="4" lg="3">
           <v-img
             aspect-ratio="1"
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-          ></v-img>
+            :src="cafe.picture"
+          />
         </v-col>
 
         <v-col cols="12" sm="8" lg="9">
@@ -52,7 +51,8 @@
         <v-spacer />
         <v-btn
           color="orange lighten-3"
-          @click="addTimeTable"
+          @click.native="addTimeTable"
+          to="/cafePlan"
         >
           TimeTableに追加
         </v-btn>
@@ -67,7 +67,9 @@ export default {
   props: ["cafe"],
   methods: {
     addTimeTable() {
-      this.$store.commit("setCafe", this.cafe);
+      this.$store.commit("setCafe", this.cafe.name);
+      this.$store.commit("setCafeImageURL", this.cafe.picture);
+      this.$store.commit("setCafeURL", this.cafe.cafeURL); //TODO: modify
     }
   }
 };

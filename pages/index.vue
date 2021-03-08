@@ -32,7 +32,7 @@
                         </v-text-field>
                         <v-card-actions>
                         <v-spacer />
-                        <v-btn @click.native="searchCafe" to="/plan" depressed>
+                        <v-btn @click="searchCafe" depressed>
                             検索
                         </v-btn>
                         </v-card-actions>
@@ -63,12 +63,16 @@ export default {
                 this.slideshow(images);
         }, 5000);
     }, */
+
+    created() {
+        this.$store.commit("setSpotImageURL", "https://cdn.jalan.jp/jalan/img/1/kuchikomi/0851/KL/8e0f9_0000851568_2.jpg");
+    },
     methods: {
         searchCafe: function() {
             this.$store.commit("setSpot", this.spotName);
             this.$store.dispatch("getCafeInfoList", this.spotName)
                 .then(_ => {
-                    this.$router.push("/plan");
+                    this.$router.push("/cafePlan");
                 })
                 .catch(error => {
                     console.log(error);
