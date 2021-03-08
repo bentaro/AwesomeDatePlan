@@ -54,7 +54,7 @@
 							<strong>1-3pm</strong>
 							</v-col>
 							<v-col>
-							<strong>{{this.spot}}</strong>
+							<strong>{{this.$store.getters.spotName || "undecided"}}</strong>
 							<div class="caption">
 									main spot
 							</div>
@@ -71,7 +71,7 @@
 							<strong>4-6pm</strong>
 							</v-col>
 							<v-col>
-							<strong>Design Stand Up</strong>
+							<strong>{{this.$store.getters.cafeName || "undecided"}}</strong>
 							<div class="caption mb-2">
 									cafe
 							</div>
@@ -103,7 +103,7 @@
 							<strong>7-9pm</strong>
 							</v-col>
 							<v-col>
-							<strong>light Lunch</strong>
+							<strong>{{this.$store.getters.restaurantName || "undecided"}}</strong>
 							<div class="caption mb-2">
 									dinner
 							</div>
@@ -120,7 +120,7 @@
 							<strong>10pm-</strong>
 							</v-col>
 							<v-col>
-							<strong>Finish Home Screen</strong>
+							<strong>{{this.$store.getters.nightViewName || "undecided"}}</strong>
 							<div class="caption">
 									night view
 							</div>

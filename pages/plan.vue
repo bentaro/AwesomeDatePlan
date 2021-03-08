@@ -11,35 +11,36 @@
 						<v-card-title style="font-size:30px">おすすめのカフェ</v-card-title>
 
 							<v-row>
-								<v-col
-									v-for="n in 9"
-									:key="n"
-									class="d-flex child-flex"
-									cols="12"
-									sm="6"
-									lg="4"
+								<div v-for="cafe in $store.CafeInfoList" :key="cafe.cafe_id">
+									<v-col
+										v-for="n in 9"
+										:key="n"
+										class="d-flex child-flex"
+										cols="12"
+										sm="6"
+										lg="4"
 
-								>
-									<v-img
-										:src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-										:lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
-										aspect-ratio="1"
-										class="grey lighten-2"
 									>
-										<template v-slot:placeholder>
-											<v-row
-												class="fill-height ma-0"
-												align="center"
-												justify="center"
-											>
-												<v-progress-circular
-													indeterminate
-													color="grey lighten-5"
-												></v-progress-circular>
-											</v-row>
-										</template>
-									</v-img>
-								</v-col>
+										<v-img
+											:src="cafe.pictuers"
+											aspect-ratio="1"
+											class="grey lighten-2"
+										>
+											<template v-slot:placeholder>
+												<v-row
+													class="fill-height ma-0"
+													align="center"
+													justify="center"
+												>
+													<v-progress-circular
+														indeterminate
+														color="grey lighten-5"
+													></v-progress-circular>
+												</v-row>
+											</template>
+										</v-img>
+									</v-col>
+								</div>
 							</v-row>
 
 							<v-card-actions>

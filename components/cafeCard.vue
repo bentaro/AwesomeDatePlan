@@ -52,6 +52,7 @@
         <v-spacer />
         <v-btn
           color="orange lighten-3"
+          @click="addTimeTable"
         >
           TimeTableに追加
         </v-btn>
@@ -65,7 +66,8 @@ export default {
   name: "cafeCard",
   props: ["cafe"],
   methods: {
-    confirm() {
+    addTimeTable() {
+      this.$store.commit("setCafe", this.cafe);
     }
   }
 };
