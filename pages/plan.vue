@@ -2,11 +2,11 @@
   <div>
 	<v-container fluid>
 			<v-row>
-				<v-col cols="3">
+				<v-col cols="12" sm="6" lg="3">
 					<timeTable />
 				</v-col>
 
-				<v-col cols="9">
+				<v-col cols="12" sm="6" lg="9">
 					<v-card class="mx-auto" color="orange accent-1">
 						<v-card-title style="font-size:30px">おすすめのカフェ</v-card-title>
 
@@ -15,7 +15,10 @@
 									v-for="n in 9"
 									:key="n"
 									class="d-flex child-flex"
-									cols="4"
+									cols="12"
+									sm="6"
+									lg="4"
+
 								>
 									<v-img
 										:src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
