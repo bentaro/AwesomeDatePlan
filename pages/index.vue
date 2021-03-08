@@ -2,27 +2,23 @@
 <div>
     <v-app :style="{ background: $vuetify.theme.themes.light.background }">
         <div>
-            <v-row>
-                <v-col cols="3"></v-col>
-                <v-col cols="6">
-                    <img src="/spots/pic_hokkaido.jpg" class="slideshow">
-                    <img src="/spots/pic_tokyo.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_kanagawa.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_saitama.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_aichi.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_kyoto.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_osaka.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_fukuoka.jpg" class="slideshow fadeout">
-                    <img src="/spots/pic_okinawa.jpg" class="slideshow fadeout">
-                </v-col>
-                <v-col cols="3"></v-col>
-            </v-row>
-        </div>
-        <div>
-            <v-row>
-                <v-col cols="3"></v-col>
-                <v-col cols="6">
-                    <v-card class="mx-lg-15 tile" color="white" align="center">
+            <v-row
+            align="center" justify="center" align-content="center">
+                <v-col cols="12" lg="4"></v-col>
+                <v-col cols="12" lg="4">
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_hokkaido.jpg" />
+
+                    <!-- <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_hokkaido.jpg"  class="slideshow" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_tokyo.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_kanagawa.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_saitama.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_aichi.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_kyoto.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_osaka.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_fukuoka.jpg"  class="slideshow fadeout" />
+                    <v-img align="center" :aspect-ratio="4/3" src="/spots/pic_okinawa.jpg"  class="slideshow fadeout" /> -->
+
+                    <v-card>
                         <v-card-title style="font-size:25px;">
                             次のデートはどこへ行きますか？
                         </v-card-title>
@@ -42,7 +38,7 @@
                         </v-card-actions>
                     </v-card>
                 </v-col>
-                <v-col cols="3"></v-col>
+                <v-col cols="12" lg="4"></v-col>
             </v-row>
         </div>
     </v-app>
@@ -59,14 +55,14 @@ export default {
     },
     components: {
     },
-    mounted() {
+    /* mounted() {
         const images = document.getElementsByClassName('slideshow');
         this.slideshow(images);
         setInterval(() => {
             this.index = this.index < images.length - 1 ? this.index + 1 : 0;
                 this.slideshow(images);
         }, 5000);
-    },
+    }, */
     methods: {
         searchCafe: function() {
             this.$store.commit("setSpot", this.spotName);
@@ -78,20 +74,20 @@ export default {
                     console.log(error);
                 })
         },
-        slideshow(images) {
+        /* slideshow(images) {
             const current = images[this.index];
             const prev = images[this.index - 1] ? images[this.index - 1] : images[images.length - 1];
             current.classList.add('fadein');
             current.classList.remove('fadeout');
             prev.classList.remove('fadein');
             prev.classList.add('fadeout');
-        }
+        } */
     }
 }
 </script>
 
 <style>
-.fadein {
+/* .fadein {
   opacity: 1;
   transition: opacity 0.5s;
 }
@@ -103,6 +99,6 @@ export default {
 
 .slideshow {
   position: absolute;
-}
+} */
 
 </style>
