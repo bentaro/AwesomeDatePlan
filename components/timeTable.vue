@@ -102,10 +102,20 @@
 							<strong>7-9pm</strong>
 							</v-col>
 							<v-col>
-							<strong>{{this.$store.getters.restaurantName || "undecided"}}</strong>
+							<div v-if="$store.getters.restaurantURL==''">
+								<strong>{{this.$store.getters.restaurantName || "undecided"}}</strong>
+							</div>
+							<div v-else>
+								<a :href="$store.getters.restaurantURL"><strong>{{$store.getters.restaurantName || "undecided"}}</strong></a>
+							</div>
 							<div class="caption mb-2">
 									dinner
 							</div>
+							<v-avatar>
+								<v-img
+								:src="$store.getters.restaurantImageURL"
+								></v-img>
+							</v-avatar>
 							</v-col>
 					</v-row>
 					</v-timeline-item>
@@ -119,10 +129,20 @@
 							<strong>10pm-</strong>
 							</v-col>
 							<v-col>
-							<strong>{{this.$store.getters.nightViewName || "undecided"}}</strong>
+							<div v-if="$store.getters.nightViewURL==''">
+								<strong>{{this.$store.getters.nightViewName || "undecided"}}</strong>
+							</div>
+							<div v-else>
+								<a :href="$store.getters.nightViewURL"><strong>{{$store.getters.nightViewName || "undecided"}}</strong></a>
+							</div>
 							<div class="caption">
 									night view
 							</div>
+							<v-avatar>
+								<v-img
+								:src="$store.getters.nightViewImageURL"
+								></v-img>
+							</v-avatar>
 							</v-col>
 					</v-row>
 					</v-timeline-item>

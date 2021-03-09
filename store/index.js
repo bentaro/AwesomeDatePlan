@@ -19,6 +19,8 @@ export const state = () => ({
   cafeURL: '',
   restaurantURL: '',
   nightViewURL: '',
+
+  dstList: {},
 });
 
 export const getters = {
@@ -40,6 +42,8 @@ export const getters = {
   cafeURL: state => state.cafeURL,
   restaurantURL: state => state.restaurantURL,
   nightViewURL: state => state.nightViewURL,
+
+  dstList: state => state.dstList,
 };
 
 export const mutations = {
@@ -91,6 +95,11 @@ export const mutations = {
   setNightViewURL(state, nightViewURL) {
     state.nightViewURL = nightViewURL;
   },
+
+  addDstList(state, dst) {
+    state.dstList[dst.name] = dst;
+    console.log(state.dstList);
+  },
 };
 
 export const actions = {
@@ -105,4 +114,26 @@ export const actions = {
 				console.log(error);
 			})
 	},
+  getRestaurantInfoList({ commit }, cafeName) {
+    let url = API.GET_RESTAURANT_LIST + '?cafe=' + cafeName;
+    this.$axios.$get(url)
+      .then(restaurantInfoList => {
+        console.log(restaurantInfoList);
+        commit("setRestaurantInfoList", restaurantInfoList);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  },
+  getNightViewInfoList({ commit }, restaurantName) {
+    let url = API.GET_NIGHTVIEW_LIST + '?restaurant=' + restaurantName;
+    this.$axios.$get(url)
+      .then(nightViewInfoList => {
+        console.log(nightViewInfoList);
+        commit("setNightViewInfoList", nightViewInfoList);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  },
 };

@@ -52,7 +52,7 @@
         <v-btn
           color="orange lighten-3"
           @click.native="addTimeTable"
-          to="/cafePlan"
+          to="/mapPlan"
         >
           TimeTableに追加
         </v-btn>
@@ -70,6 +70,19 @@ export default {
       this.$store.commit("setCafe", this.cafe.name);
       this.$store.commit("setCafeImageURL", this.cafe.picture);
       this.$store.commit("setCafeURL", this.cafe.cafeURL); //TODO: modify
+      this.$store.commit("addDstList", {name: this.cafe.name, position: {lng: 139.633435, lat: 35.453932}})
+
+      // TODO: delete
+      this.$store.commit("setRestaurant", "大徳壽");
+      this.$store.commit("setRestaurantImageURL", "https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/143525/143525839.jpg?token=4ecc3fa&api=v2");
+      this.$store.commit("setRestaurantURL", "http://daitokujyu.weblike.jp/wp/"); //TODO: modify
+      this.$store.commit("addDstList", {name: "大徳壽", position: {lng: 139.634223, lat: 35.443802}});
+
+      // TODO: delete
+      this.$store.commit("setNightView", "港の見える丘公園");
+      this.$store.commit("setNightViewImageURL", "https://ext.yakei.jp/photo/pc/minato1.jpg");
+      this.$store.commit("setNightViewURL", "https://yakei.jp/japan/spot.php?i=minato"); //TODO: modify
+		  this.$store.commit("addDstList", {name: "港の見える丘公園", position: {lng: 139.654746, lat: 35.440592}});
     }
   }
 };
