@@ -54,10 +54,14 @@
 							<strong>1-3pm</strong>
 							</v-col>
 							<v-col>
-							<strong>{{this.spot}}</strong>
+							<a href="https://www.jalan.net/kankou/spt_14104ae2180146722/"><strong>{{$store.getters.spotName || "undecided"}}</strong></a>
 							<div class="caption">
-									main spot
+								main spot
 							</div>
+							<v-avatar>
+								<v-img
+								:src="$store.getters.spotImageURL" />
+							</v-avatar>
 							</v-col>
 					</v-row>
 					</v-timeline-item>
@@ -71,24 +75,19 @@
 							<strong>4-6pm</strong>
 							</v-col>
 							<v-col>
-							<strong>Design Stand Up</strong>
+							<div v-if="$store.getters.cafeURL==''">
+								<strong>{{this.$store.getters.cafeName || "undecided"}}</strong>
+							</div>
+							<div v-else>
+								<a :href="$store.getters.cafeURL"><strong>{{$store.getters.cafeName || "undecided"}}</strong></a>
+							</div>
 							<div class="caption mb-2">
-									cafe
+								cafe
 							</div>
 							<v-avatar>
-									<v-img
-									src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairFrida&accessoriesType=Kurt&hairColor=Red&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=GraphicShirt&clotheColor=Gray01&graphicType=Skull&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Disbelief&skinColor=Brown"
-									></v-img>
-							</v-avatar>
-							<v-avatar>
-									<v-img
-									src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription02&hairColor=Black&facialHairType=MoustacheMagnum&facialHairColor=BrownDark&clotheType=BlazerSweater&clotheColor=Black&eyeType=Default&eyebrowType=FlatNatural&mouthType=Default&skinColor=Tanned"
-									></v-img>
-							</v-avatar>
-							<v-avatar>
-									<v-img
-									src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairMiaWallace&accessoriesType=Sunglasses&hairColor=BlondeGolden&facialHairType=Blank&clotheType=BlazerSweater&eyeType=Surprised&eyebrowType=RaisedExcited&mouthType=Smile&skinColor=Pale"
-									></v-img>
+								<v-img
+								:src="$store.getters.cafeImageURL"
+								></v-img>
 							</v-avatar>
 							</v-col>
 					</v-row>
@@ -103,10 +102,20 @@
 							<strong>7-9pm</strong>
 							</v-col>
 							<v-col>
-							<strong>light Lunch</strong>
+							<div v-if="$store.getters.restaurantURL==''">
+								<strong>{{this.$store.getters.restaurantName || "undecided"}}</strong>
+							</div>
+							<div v-else>
+								<a :href="$store.getters.restaurantURL"><strong>{{$store.getters.restaurantName || "undecided"}}</strong></a>
+							</div>
 							<div class="caption mb-2">
 									dinner
 							</div>
+							<v-avatar>
+								<v-img
+								:src="$store.getters.restaurantImageURL"
+								></v-img>
+							</v-avatar>
 							</v-col>
 					</v-row>
 					</v-timeline-item>
@@ -120,10 +129,20 @@
 							<strong>10pm-</strong>
 							</v-col>
 							<v-col>
-							<strong>Finish Home Screen</strong>
+							<div v-if="$store.getters.nightViewURL==''">
+								<strong>{{this.$store.getters.nightViewName || "undecided"}}</strong>
+							</div>
+							<div v-else>
+								<a :href="$store.getters.nightViewURL"><strong>{{$store.getters.nightViewName || "undecided"}}</strong></a>
+							</div>
 							<div class="caption">
 									night view
 							</div>
+							<v-avatar>
+								<v-img
+								:src="$store.getters.nightViewImageURL"
+								></v-img>
+							</v-avatar>
 							</v-col>
 					</v-row>
 					</v-timeline-item>
